@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/order.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="css/formstyles.css">
+    <title>Miikawaadad Designs T-Shirt Co</title>
+</head>
+
+
+<!--header nav bar-->
+<header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Designs</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="logo-link">
+            <img src="/img/logo.png" alt="Logo" class="logo-image" style="
+                      width: 75px;
+                      height: 60px;
+                      position: absolute;
+                      top: 4%;
+                      transform: translateY(-50%);
+                      left: 10px;
+                      height: 50px;
+                      position: absolute;
+                    ">
+        </a>
+    </div>
+</header>
+
+
+<!--form-->
+<h1 style="text-align: center;">Contact / Order Inquiry</h1>
+<p class="output" id="output"></p>
+<div class="form" style="text-align: center">
+
+    <form id="contactForm" action="order.html" method="post" onsubmit="handleSubmission(event)">
+        <!-- company nameInput validation-->
+        <label for="companyName">Company Name: </label>
+        <input type="text" id="companyName" name="companyName">
+
+        <!-- first nameInput validation-->
+        <label for="firstName">First Name:<span>*</span></label>
+        <input type="text" id="firstName" name="firstName">
+
+        <!-- last nameInput validation-->
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName">
+
+        <!-- emailInput validation-->
+        <label for="email">Email:<span>*</span></label>
+        <input type="email" id="email" name="email">
+
+        <!-- reverify emailInput validation-->
+        <label for="reverifyEmail">Re-verify Email:<span>*</span></label>
+        <input type="email" id="reverifyEmail" name="reverifyEmail">
+
+        <label for="additionalInput1">Additional Message:</label>
+        <input type="text" id="additionalInput1" name="additionalInput1">
+
+        <!--contact phone number-->
+        <label for="phone">Phone Number:<br> 000-000-0000<span>*</span></label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+
+
+        <!-- checkboxes -->
+        <h3>Select Inquiry: Tshirt | Design | Graphics</h3>
+        <div class="purchaseOptions">
+            <div>
+                <label for="option1"><img src="/img/tshirt.png" alt="T-shirt"><input type="checkbox" value="25"
+                        id="option1">TSHIRT
+                    $25</label>
+            </div>
+            <div>
+                <label for="option2"><img src="/img/headdress.png" alt="Headdress"><input type="checkbox" value="60"
+                        id="option2">DESIGN
+                    $60</label>
+            </div>
+            <div>
+                <label for="option3"><img src="/img/fantasy.png" alt="Fantasy"><input type="checkbox" value="100"
+                        id="option3">GRAPHICS
+                    $100</label>
+            </div>
+        </div>
+
+        <!--radio buttons-->
+        <div>
+            <h3>Select A Finish</h3>
+            <div class="purchaseOptions">
+                <div>
+                    <label for="mfinish"><input type="radio" value="10" id="mfinish">Matte Finish
+                        ($10)</label>
+                </div>
+                <div>
+                    <label for="gfinish"><input type="radio" value="15" id="gfinish">Glossy Finish
+                        ($15)</label>
+                </div>
+            </div>
+        </div>
+
+        <input type="submit" value="Submit" id="submit">
+        <input type="reset" value="Reset" id="reset">
+
+    </form>
+</div>
+
+</html>
